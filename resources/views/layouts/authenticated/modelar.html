@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="generator" content="">        
+        <title>Projetos - Modelos </title>
+        <!-- Bootstrap core CSS-->
+        <link rel="stylesheet" href="{{ asset('assets/dist/css/bootstrap.min.css') }}">               
+        <!-- Bootstrap core CSS FIM-->
+        <!-- CSS Personalizado-->        
+        <link rel="stylesheet" href="{{asset('assets/dist/css/custom.css')}}" >        
+        <!-- CSS Personalizado FIM-->
+        <!-- Javascrip Bootstrap core-->        
+        <script src="{{ asset('assets/dist/js/bootstrap.bundle.min.js') }}" ></script>        
+        <!-- Javascrip Bootstrap core FIM-->
+    </head>
+
+    <body>
+        <main>
+            <div class="container pai-criarCard"> 
+                @include('layouts.authenticated.menu')
+                <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"><a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"><span class="fs-4"><img src="" height="50" /></span></a>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Projetos</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Tutoriais</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Suporte</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Sair</a></li>
+                    </ul>
+                </header>           
+                <div class="row filho-criarCard">
+                    <div class="panel-body body-criarCard">
+                        <nav class="navAbas">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-modelos-tab" data-bs-toggle="tab" data-bs-target="#nav-modelos" type="button" role="tab" aria-controls="nav-modelos">Modelos</button>
+                                <button class="nav-link" id="nav-background-tab" data-bs-toggle="tab" data-bs-target="#nav-background" type="button" role="tab" aria-controls="nav-background" aria-selected="false">Fundo do Cartão</button>
+                                <button class="nav-link" id="nav-logotipo-tab" data-bs-toggle="tab" data-bs-target="#nav-logotipo" type="button" role="tab" aria-controls="nav-logotipo" aria-selected="false">Logotipo</button>
+                                <button class="nav-link" id="nav-destaque-tab" data-bs-toggle="tab" data-bs-target="#nav-destaque" type="button" role="tab" aria-controls="nav-destaque" aria-selected="false">Destaque</button>
+                                <button class="nav-link" id="nav-frase-tab" data-bs-toggle="tab" data-bs-target="#nav-impacto" type="button" role="tab" aria-controls="nav-impacto" aria-selected="false">Frase de Impacto</button>
+                                <button class="nav-link" id="nav-botoes-tab" data-bs-toggle="tab" data-bs-target="#nav-botoes" type="button" role="tab" aria-controls="nav-botoes" aria-selected="false">Botões</button>
+                                <button class="nav-link" id="nav-catalogo-tab" data-bs-toggle="tab" data-bs-target="#nav-catalogo" type="button" role="tab" aria-controls="nav-catalogo" aria-selected="false">Catálogo</button>
+                                <button class="nav-link" id="nav-media-tab" data-bs-toggle="tab" data-bs-target="#nav-media" type="button" role="tab" aria-controls="nav-media" aria-selected="false">Videos e Audios</button>
+                                <button class="nav-link" id="nav-banners-tab" data-bs-toggle="tab" data-bs-target="#nav-banners" type="button" role="tab" aria-controls="nav-banners" aria-selected="false">Banners</button>
+                                <button class="nav-link" id="nav-codigo-tab" data-bs-toggle="tab" data-bs-target="#nav-personalizado" type="button" role="tab" aria-controls="nav-personalizado" aria-selected="false">Código</button>
+                            </div><!--Fecha nav-tabs-->                           
+                        </nav>
+                        <div class="row">
+                            <div class="tab-content col=9" id="nav-tabContent">                            
+                                @include('tabs_content.models')
+                                <div class="tab-pane fade show active" id="nave-modelos" role="tabpanel" aria-labelledby="nav-modelos-tab">
+                                    <!--Inicio Conteudos aba Modelos-->
+                                    <br>
+                                    <h6 class="col-sm-8">Projetos &#62; <b>Modelos</b></h6>
+                                    <hr>
+                                </div>
+                                @include('tabs_content.backgrounds')
+                                @include('tabs_content.logos')
+                            </div>
+                            <div class="col-3">
+    
+                            </div>
+                        </div>
+                        <!--Footer START--> 
+                        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                            <div class="row">
+                                <div class="col-12 col-md"><img src="" height="50" /><small class="d-block mb-3 text-muted">CopyRight {{  date('Y')  }}</small>
+                                </div>
+                                <div class="col-6 col-md">
+                                    <h5>Menu</h5>
+                                    <ul class="list-unstyled text-small">
+                                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Meus Projetos</a></li>
+                                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Tutoriais</a></li>
+                                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Editar sua Agênçia</a></li>
+                                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Suporte</a></li>                
+                                    </ul>
+                                </div>
+                            </div>
+                        </footer><!--Footer END-->                   
+                </div><!--Fecha Container Filho-->
+            </div><!--Fecha Container Pai-->           
+        </main><!--End of Body-->
+    </body>
+    
+    </html>
+
